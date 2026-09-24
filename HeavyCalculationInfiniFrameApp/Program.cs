@@ -1,4 +1,5 @@
 ﻿using InfiniFrame;
+using InfiniFrame.Security;
 using System.Security.Cryptography;
 
 namespace HeavyCalculationInfiniFrameApp;
@@ -12,7 +13,7 @@ internal static class Program
 		var window = windowBuilder
 			.SetTitle("I'm freshly opened")
 			.SetMaximized(true)
-
+			.SetTrustAllOrigins(true)
 			.EnableContextMenu(false)
 			.EnableIgnoreCertificateErrors(true)
 			.EnableJavascriptClipboardAccess(true)
